@@ -4,6 +4,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+
+  --breakpoint-tablet: 650px;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -78,7 +81,18 @@
   --sidebar-ring: oklch(0.552 0.016 285.938);
 }
 
-
+.light {
+  --background: rgb(196, 194, 194);
+  --foreground: rgb(22, 22, 22);
+  --popover-foreground: rgb(22, 22, 22);
+  --popover: white;
+  --border: gray;
+  --primary: rgb(22, 22, 22);
+  --primary-foreground: rgb(196, 194, 194);
+  --card: rgb(196, 194, 194);
+  --muted-foreground: rgb(22, 22, 22);
+  --input: rgb(22, 22, 22);
+}
 @layer base {
   * {
     @apply border-border outline-ring/50;

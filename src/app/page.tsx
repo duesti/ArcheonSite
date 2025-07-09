@@ -1,27 +1,22 @@
+
 'use client'
 
-import {
-  Button
-} from '@/components/ui/button'
-import { useState } from 'react'
+import { Header } from "@/components/Header"
+import { Hero } from "@/components/Hero"
+import { FeaturesParagraph } from "@/components/FeaturesParagraph"
+import { Features } from "@/components/Features"
+import { FaqParagraph } from "@/components/FaqParagraph"
+import { FaqAccordion } from "@/components/FaqAccordion"
 
 export default function Home() {
-  const [num, setNum] = useState(0)
-
-  return (
-    <main className='flex justify-center h-screen items-center flex-col gap-5'>
-      <p className='font-mono text-lg'>
-        {num}
-      </p>
-
-      <Button
-        variant={'outline'}
-        size={'sm'}
-        className='cursor-pointer'
-        onClick={() => setNum(num + 1)}
-      >
-        Click me
-      </Button>
+  return(
+    <main className="flex flex-col gap-6 w-full max-w-4xl mx-auto">
+      <Header />
+      <Hero />
+      <FeaturesParagraph />
+      <Features />
+      <FaqParagraph />
+      <FaqAccordion />
     </main>
   )
 }
